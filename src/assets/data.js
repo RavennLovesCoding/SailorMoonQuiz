@@ -1,6 +1,6 @@
 export const data = [
     {
-      question: "In season three, which character had their heart crycal taken first?",
+      question: "In season three, which scout had their heart crystal taken first?",
       option1: "Rei",
       option2: "Usagi",
       option3: "Makoto",
@@ -16,11 +16,11 @@ export const data = [
       ans: 4,
     },
     {
-      question: "What is Sailor Uranus' first attack in the anime?",
-      option1: "World Shaking",
-      option2: "Space Turbulence",
-      option3: "Deep Submerge",
-      option4: "Submarine Reflection",
+      question: "What is the name of the guy who works at the arcade?",
+      option1: "Andrew/Motoki Furuhata",
+      option2: "Melvin/Umino Gurio",
+      option3: "Darian/Chiba Mamoru",
+      option4: "Chad/Kumada Yuuichirou",
       ans: 1,
     },
     {
