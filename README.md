@@ -1,7 +1,7 @@
 # SailorMoonQuiz
 
 ## Making of the quiz
-Quiz tutorial by [GreatStack on youtube(https://youtu.be/VMZ7lcSdVnY?si=5_wWmFFJurZ0ETLs)] with some modifications
+Quiz tutorial by [GreatStack on youtube](https://youtu.be/VMZ7lcSdVnY?si=5_wWmFFJurZ0ETLs) with some modifications
 - simplied the react code in a few places
 - changed the reccomended css
 - added individual images based on score for the results
