@@ -1,6 +1,11 @@
 import React, { useRef, useState } from 'react'
 import './Quiz.css'
 import { data } from '../../assets/data';
+import sm1 from '../images/sm1.gif'
+import sm2 from '../images/sm2.jpg'
+import sm3 from '../images/sm3.jpg'
+import sm4 from '../images/sm4.jpg'
+import sm5 from '../images/sm5.png'
 
 const Quiz = () => {
 
@@ -9,6 +14,7 @@ const Quiz = () => {
     let [choice, setChoice] = useState(false);
     let [score, setScore] = useState(0);
     let [result, setResult] = useState(false);
+    let [img, setImg] = useState(null)
 
     let Option1 = useRef(null);
     let Option2 = useRef(null);
@@ -31,10 +37,25 @@ const Quiz = () => {
         }
     }
 
+    const scoreImage = ()=> {
+        if(score === 5){
+            setImg(sm1);
+        } else if(score >= 4 ){
+            setImg(sm2);
+        } else if(score >= 3 ){
+            setImg(sm3);
+        } else if(score >= 2 ){
+            setImg(sm4);
+        } else {
+            setImg(sm5);
+        }
+    }
+
     const next = () =>{
         if (choice===true){
             if(index === data.length - 1) {
                 setResult(true);
+                scoreImage();
                 return 0;
             }
             setIndex(++index);
@@ -54,14 +75,18 @@ const Quiz = () => {
         setScore(0);
         setChoice(false);
         setResult(false);
+        setImage(null);
     }
+
 
   return (
     <>
     <div className="container">
         <h1>How well do you know Sailor Moon?</h1>
         <hr />
-        {result?<><h2>You Scored: {score} out of {data.length}</h2>
+        {result?<>
+        <h2>You Scored: {score} out of {data.length}</h2>
+        <p><img className="resultImage" src={img} alt="sailor moon icon" /></p>
         <button onClick={reset}>Reset</button></>:<><h2>{index+1}. {question.question}</h2>
         <ul>
             <li ref={Option1} onClick={(e)=>{checkAns(e,1)}}>{question.option1}</li>

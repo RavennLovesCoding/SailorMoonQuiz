@@ -92,3 +92,12 @@
     height: 50px;
 
 }
+
+.resultImage {
+    width: 450px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
